@@ -1,0 +1,17 @@
+<div>
+  <h1>Todo List</h1>
+  <button routerLink="/add">Add New Todo</button>
+  <ul>
+    <li *ngFor="let todo of todos">
+      <span [ngClass]="todo.isCompleted ? 'completed' : ''">{{
+        todo.title
+      }}</span>
+      <button (click)="markAsCompleted(todo)">
+        {{ todo.isCompleted ? "Mark as Incomplete" : "Mark as Completed" }}
+      </button>
+      <button [routerLink]="['/details', todo.id]">View Details</button>
+      <button [routerLink]="['/edit', todo.id]">Edit</button>
+      <button (click)="deleteTodo(todo.id)">Delete</button>
+    </li>
+  </ul>
+</div>

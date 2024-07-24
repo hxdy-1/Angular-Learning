@@ -1,0 +1,10 @@
+<div *ngIf="todo">
+  <h1>{{ todo.title }}</h1>
+  <p>{{ todo.description }}</p>
+  <p>Created at: {{ todo.createdAt | date : "medium" }}</p>
+  <button (click)="markAsCompleted()">
+    {{ todo.isCompleted ? "Mark as Incomplete" : "Mark as Completed" }}
+  </button>
+  <button [routerLink]="['/edit', todo.id]">Edit</button>
+  <button (click)="deleteTodo()">Delete</button>
+</div>

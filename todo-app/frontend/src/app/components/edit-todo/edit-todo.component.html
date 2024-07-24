@@ -1,0 +1,24 @@
+<div *ngIf="todo">
+  <h1>Edit Todo</h1>
+  <form (ngSubmit)="updateTodo()">
+    <div>
+      <label for="title">Title</label>
+      <input
+        type="text"
+        id="title"
+        [(ngModel)]="todo.title"
+        name="title"
+        required
+      />
+    </div>
+    <div>
+      <label for="description">Description</label>
+      <textarea
+        id="description"
+        [(ngModel)]="todo.description"
+        name="description"
+      ></textarea>
+    </div>
+    <button type="submit">Update</button>
+  </form>
+</div>

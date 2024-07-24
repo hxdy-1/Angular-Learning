@@ -1,0 +1,44 @@
+<div>
+  <h1>Encryption Example</h1>
+
+  <div>
+    <h2>Encrypt</h2>
+    <label for="valueToEncrypt">Value to Encrypt:</label>
+    <input
+      type="text"
+      id="valueToEncrypt"
+      [(ngModel)]="valueToEncrypt"
+      placeholder="Enter a string or JSON"
+    />
+
+    <button (click)="encrypt()">Encrypt</button>
+    <div *ngIf="encryptedValue">
+      <p><strong>Encrypted Value:</strong> {{ encryptedValue }}</p>
+      <p><strong>Generated Key:</strong> {{ encryptionKey }}</p>
+    </div>
+  </div>
+
+  <div>
+    <h2>Decrypt</h2>
+    <label for="encryptedValueToDecrypt">Encrypted Value:</label>
+    <input
+      type="text"
+      id="encryptedValueToDecrypt"
+      [(ngModel)]="encryptedValueToDecrypt"
+      placeholder="Enter the encrypted value"
+    />
+
+    <label for="decryptionKey">Decryption Key:</label>
+    <input
+      type="text"
+      id="decryptionKey"
+      [(ngModel)]="decryptionKey"
+      placeholder="Enter the key"
+    />
+
+    <button (click)="decrypt()">Decrypt</button>
+    <div *ngIf="decryptedValue">
+      <p><strong>Decrypted Value:</strong> {{ decryptedValue }}</p>
+    </div>
+  </div>
+</div>

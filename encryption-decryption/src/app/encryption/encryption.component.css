@@ -1,0 +1,16 @@
+div {
+  margin: 20px;
+}
+
+input {
+  display: block;
+  margin: 10px 0;
+}
+
+button {
+  margin: 10px 5px;
+}
+
+p {
+  margin: 10px 0;
+}
